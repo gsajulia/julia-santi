@@ -1,3 +1,12 @@
 .title {
     color: var(--pinky);
 }
+
+.experienceContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.experienceCard {
+    width: 50%;
+}

@@ -1,12 +1,18 @@
 import { TExperienceCard } from "./experience.types";
+import styles from "./experience-card.module.css";
+import Chip from "../../atoms/chip/chip";
 
 const ExperienceCard = ({ experience }: TExperienceCard) => {
     const { role, companyName, tags, period, about, skills } = experience;
     return (
-        <div>
-            <h4>{role}</h4>
+        <div className={styles.experienceCard}>
+            <h4 className={styles.cardTitle}>{role}</h4>
             <span>{companyName}</span>
-            {tags.map((tag) => tag.title)}
+            <div className={styles.tagsContainer}>
+                {tags.map((tag) => (
+                    <Chip title={tag.title} color={tag.color} />
+                ))}
+            </div>
             <span>{period}</span>
             <ul>
                 {about.map((item) => (
@@ -14,11 +20,14 @@ const ExperienceCard = ({ experience }: TExperienceCard) => {
                 ))}
             </ul>
 
-            {skills.map((skill) => (
-                <div key={skill.id}>
-                    <img width={50} src={skill.image} alt={skill.label} />
-                </div>
-            ))}
+            <div className={styles.technologiesContainer}>
+                {skills.map((skill) => (
+                    <div className={styles.skill} key={skill.id}>
+                        <img width={30} src={skill.image} alt={skill.label} />
+                        {skill.label}
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

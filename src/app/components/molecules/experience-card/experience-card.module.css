@@ -1,0 +1,30 @@
+.experienceCard {
+    border: 1px solid var(--light-blue);
+    margin: 1vw;
+    padding: 40px;
+    background-color: var(--off-black);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+}
+
+.tagsContainer {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.technologiesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}

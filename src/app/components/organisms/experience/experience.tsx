@@ -9,9 +9,13 @@ const Experience = () => {
     return (
         <section>
             <h1 className={styles.title}>Experience & Skills</h1>
-            {experiences.map((experience) => (
-                <ExperienceCard experience={experience} />
-            ))}
+            <div className={styles.experienceContainer}>
+                {experiences.map((experience) => (
+                    <div className={styles.experienceCard}>
+                        <ExperienceCard experience={experience} />
+                    </div>
+                ))}
+            </div>
         </section>
     );
 };
