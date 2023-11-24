@@ -5,14 +5,26 @@
         "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
         "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-    --foreground-rgb: #ede7f6;
-    --background-body: #151316;
+    --pinky: #fb87fd;
+    --purple: #b485ff;
+    --green: #00ff9f;
+    --light-blue: #5ce1e6;
+    --light-blue-sky: #81d4fa;
+    --light-pink: #ffc0cb;
+    --yellow: #ffcb6b;
+    --salmon: #e57373;
+}
+
+h1 {
+    font-size: 2.125rem;
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 1.235;
 }
 
 html,
@@ -29,6 +41,7 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+    color: var(--purple);
 }
 
 @media (prefers-color-scheme: dark) {

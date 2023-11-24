@@ -9,3 +9,24 @@
     align-items: center;
     justify-content: center;
 }
+
+.mark {
+    background: none;
+    color: var(--pinky);
+}
+
+.description {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.smallText {
+    font-size: 0.75rem;
+}
+
+.educationText {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}

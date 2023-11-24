@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./introduction.module.css";
+import graduationIcon from "../../../../../public/graduating.svg";
 
 const Introduction = () => {
     return (
@@ -14,9 +15,10 @@ const Introduction = () => {
                 />
             </div>
             <h1>
-                Hi, I'm Júlia, a <mark>FullStack developer</mark>!
+                Hi, I'm Júlia, a{" "}
+                <mark className={styles.mark}>FullStack developer</mark>!
             </h1>
-            <p>
+            <p className={styles.description}>
                 I have over 5 years of specialization in building robust
                 interfaces using React and Typescript. My professional journey
                 extends beyond Frontend development into Backend and Data
@@ -27,12 +29,16 @@ const Introduction = () => {
                 to the Data Science community through the publication of papers,
                 with a focus on game mining and climate change prediction.
             </p>
-            <div>
-                Graduating - Data Science (2023-Present) |{" "}
-                <Link href={"https://www5.usp.br/"}>USP</Link>
+            <div className={styles.educationText}>
+                <Image width={50} src={graduationIcon} alt="Graduation" />
+                Postgraduation - Data Science{" "}
+                <span className={styles.smallText}>(2023-Present)</span> |{"  "}
+                <Link href={"https://www5.usp.br/"}> USP</Link>
             </div>
-            <div>
-                Graduate - Information Systems (2017-2022) |{" "}
+            <div className={styles.educationText}>
+                <Image width={50} src={graduationIcon} alt="Graduation" />
+                Bachelor - Information Systems{" "}
+                <span className={styles.smallText}>(2017-2022)</span> |{"  "}
                 <Link href={"https://www.ufsm.br/"}> UFSM</Link>
             </div>
             <div></div>
