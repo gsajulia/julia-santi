@@ -1,0 +1,11 @@
+.introduction {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
