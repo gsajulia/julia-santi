@@ -1,7 +1,17 @@
 .introduction {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10rem;
+    margin: 8vh 0;
+}
+
+.introductionContent {
+    display: flex;
+    max-width: 50vw;
     gap: 2rem;
+    flex-direction: column;
 }
 
 .profile {
