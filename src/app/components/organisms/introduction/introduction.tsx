@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./introduction.module.css";
 import graduationIcon from "../../../../../public/graduating.svg";
-import chatIcon from "../../../../../public/message.png";
 import { useState } from "react";
 
 const Introduction = () => {
@@ -19,7 +18,6 @@ const Introduction = () => {
                 <Image
                     src={isFlipped ? "/profile-cartoon.png" : "/profile.png"}
                     alt="My Profile Image"
-                    objectFit="cover"
                     width={300}
                     height={300}
                     className={styles.profileImage}
@@ -54,9 +52,8 @@ const Introduction = () => {
                 <Link href={"https://www.ufsm.br/"}> UFSM</Link>
             </div>
             <div className={styles.educationText}>
-                <Image width={45} src={chatIcon} alt="Chat icon" /> Fluent with{" "}
-                <mark className={styles.markLanguage}>English</mark> and{" "}
-                <mark className={styles.markLanguage}>Portuguese</mark>
+                Fluent with <mark className={styles.markLanguage}>English</mark>{" "}
+                and <mark className={styles.markLanguage}>Portuguese</mark>
             </div>
         </section>
     );

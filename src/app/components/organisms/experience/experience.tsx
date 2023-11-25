@@ -5,7 +5,6 @@ import styles from "./experience.module.css";
 
 const Experience = () => {
     const experiences: TExperience[] = [cowmed, drakkar, fetchly, sebratec];
-
     return (
         <section className={styles.experienceAndSkillsContainer}>
             <h1 className={styles.title}>Experience & Skills</h1>

@@ -1,0 +1,16 @@
+.technologyDetails {
+    padding: 16px;
+}
+
+.technologyDetails img {
+    margin-bottom: 8px;
+}
+
+.technologyDetails h2 {
+    color: #007bff;
+}
+
+.description {
+    display: flex;
+    gap: 2rem;
+}
