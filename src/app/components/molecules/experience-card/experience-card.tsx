@@ -20,6 +20,7 @@ const ExperienceCard = ({ experience }: TExperienceCard) => {
                 ))}
             </ul>
 
+            <h4>Skills</h4>
             <div className={styles.technologiesContainer}>
                 {skills.map((skill) => (
                     <div className={styles.skill} key={skill.id}>

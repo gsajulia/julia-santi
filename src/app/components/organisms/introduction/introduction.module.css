@@ -27,6 +27,11 @@
 
 .educationText {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     gap: 1rem;
+}
+
+.markLanguage {
+    color: var(--light-blue-sky);
+    background: none;
 }

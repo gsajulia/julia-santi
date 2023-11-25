@@ -7,13 +7,11 @@ const Experience = () => {
     const experiences: TExperience[] = [cowmed, drakkar, fetchly, sebratec];
 
     return (
-        <section>
+        <section className={styles.experienceAndSkillsContainer}>
             <h1 className={styles.title}>Experience & Skills</h1>
             <div className={styles.experienceContainer}>
                 {experiences.map((experience) => (
-                    <div className={styles.experienceCard}>
-                        <ExperienceCard experience={experience} />
-                    </div>
+                    <ExperienceCard experience={experience} />
                 ))}
             </div>
         </section>

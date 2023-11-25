@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./introduction.module.css";
 import graduationIcon from "../../../../../public/graduating.svg";
+import chatIcon from "../../../../../public/message.png";
 
 const Introduction = () => {
     return (
@@ -36,12 +37,16 @@ const Introduction = () => {
                 <Link href={"https://www5.usp.br/"}> USP</Link>
             </div>
             <div className={styles.educationText}>
-                <Image width={50} src={graduationIcon} alt="Graduation" />
+                <Image width={50} src={graduationIcon} alt="Graduation icon" />
                 Bachelor - Information Systems{" "}
                 <span className={styles.smallText}>(2017-2022)</span> |{"  "}
                 <Link href={"https://www.ufsm.br/"}> UFSM</Link>
             </div>
-            <div></div>
+            <div className={styles.educationText}>
+                <Image width={45} src={chatIcon} alt="Chat icon" /> Fluent with{" "}
+                <mark className={styles.markLanguage}>English</mark> and{" "}
+                <mark className={styles.markLanguage}>Portuguese</mark>
+            </div>
         </section>
     );
 };

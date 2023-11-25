@@ -1,12 +1,16 @@
 .title {
     color: var(--pinky);
+    margin: 2rem 0;
+}
+
+.experienceAndSkillsContainer {
+    display: flex;
+    flex-direction: column;
 }
 
 .experienceContainer {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.experienceCard {
-    width: 50%;
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    gap: 8px;
+    align-items: center;
 }

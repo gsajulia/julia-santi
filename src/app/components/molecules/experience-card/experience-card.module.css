@@ -6,6 +6,9 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    width: 100%;
+    max-width: 40rem;
+    height: 650px;
 }
 
 .cardTitle {

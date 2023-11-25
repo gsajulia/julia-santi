@@ -4,8 +4,10 @@
     --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
         "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
         "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-
+    --background: #151316
+    --off-white: #ede7f6;
     --pinky: #fb87fd;
+    --light-purple: #d8bfd8;
     --purple: #b485ff;
     --green: #00ff9f;
     --light-blue: #5ce1e6;
@@ -35,8 +37,8 @@ body {
 }
 
 body {
-    color: #ede7f6;
-    background: #151316;
+    color: var(--off-white);
+    background: var(--background);
 }
 
 a {
