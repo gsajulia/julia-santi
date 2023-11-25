@@ -8,10 +8,11 @@ import TechnologyDetails from "../tecnologies-details/tecnologies-details";
 
 const ExperienceCard = ({ experience }: TExperienceCard) => {
     const { role, companyName, tags, period, about, skills } = experience;
-    const [currentTechnology, setCurrentTechnology] = useState(skills[0]);
+    const [currentTechnology, setCurrentTechnology] = useState();
 
     const handleTechnologyClick = (technology) => {
-        setCurrentTechnology(technology);
+        if (currentTechnology !== technology) setCurrentTechnology(technology);
+        else setCurrentTechnology(undefined);
     };
     return (
         <div className={styles.experienceCard}>
@@ -43,7 +44,9 @@ const ExperienceCard = ({ experience }: TExperienceCard) => {
             </div>
 
             <div className={styles.technologiesInfoContainer}>
-                <TechnologyDetails currentTechnology={currentTechnology} />
+                {currentTechnology && (
+                    <TechnologyDetails currentTechnology={currentTechnology} />
+                )}
             </div>
         </div>
     );

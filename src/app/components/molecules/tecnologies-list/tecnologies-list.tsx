@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styles from "./tecnologies-list.module.css";
 
 const TechnologyList = ({
@@ -24,12 +23,6 @@ const TechnologyList = ({
             ))}
         </ul>
     );
-};
-
-TechnologyList.propTypes = {
-    technologies: PropTypes.array.isRequired,
-    onTechnologyClick: PropTypes.func.isRequired,
-    currentTechnology: PropTypes.object.isRequired,
 };
 
 export default TechnologyList;

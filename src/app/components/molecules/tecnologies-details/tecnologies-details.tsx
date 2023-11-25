@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styles from "./tecnologies-details.module.css";
 
 const TechnologyDetails = ({ currentTechnology }) => {
@@ -16,10 +15,6 @@ const TechnologyDetails = ({ currentTechnology }) => {
             </div>
         </div>
     );
-};
-
-TechnologyDetails.propTypes = {
-    currentTechnology: PropTypes.object.isRequired,
 };
 
 export default TechnologyDetails;

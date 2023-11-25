@@ -4,7 +4,7 @@ import { TExperience } from "@/app/models/base";
 import styles from "./experience.module.css";
 
 const Experience = () => {
-    const experiences: TExperience[] = [cowmed, drakkar, fetchly, sebratec];
+    const experiences: TExperience[] = [sebratec, fetchly, drakkar, cowmed];
     return (
         <section className={styles.experienceAndSkillsContainer}>
             <h1 className={styles.title}>Experience & Skills</h1>
