@@ -35,4 +35,3 @@ export const B_RUBY_N_RAILS = 112;
 export const D_PYTHON = 201;
 export const D_R = 202;
 export const D_SHINY = 203;
-export const D_NN = 204;

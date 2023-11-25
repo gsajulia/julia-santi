@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./tecnologies-details.module.css";
+import { TTecnologiesDetails } from "./tecnologies-details.types";
 
-const TechnologyDetails = ({ currentTechnology }) => {
+const TechnologyDetails = ({ currentTechnology }: TTecnologiesDetails) => {
     return (
         <div className={styles.technologyDetails}>
             <h2>{currentTechnology.label}</h2>

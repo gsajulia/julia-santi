@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "./tecnologies-list.module.css";
+import { TTecnologiesList } from "./tecnologies-list.types";
 
 const TechnologyList = ({
     technologies,
     onTechnologyClick,
     currentTechnology,
-}) => {
+}: TTecnologiesList) => {
     return (
         <ul className={styles.technologiesList}>
             {technologies.map((technology) => (
