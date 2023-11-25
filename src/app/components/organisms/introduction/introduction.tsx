@@ -1,20 +1,29 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./introduction.module.css";
 import graduationIcon from "../../../../../public/graduating.svg";
 import chatIcon from "../../../../../public/message.png";
+import { useState } from "react";
 
 const Introduction = () => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const changeProfileImage = () => {
+        if (!isFlipped) setIsFlipped((prev) => !prev);
+    };
+
     return (
         <section className={styles.introduction}>
             <div className={styles.profile}>
                 <Image
-                    src="/me.png"
+                    src={isFlipped ? "/profile-cartoon.png" : "/profile.png"}
                     alt="My Profile Image"
                     objectFit="cover"
                     width={300}
                     height={300}
                     className={styles.profileImage}
+                    onMouseOut={changeProfileImage}
                 />
             </div>
             <h1>

@@ -4,7 +4,7 @@
     --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
         "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
         "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-    --background: #151316
+    --background: #151316;
     --off-white: #ede7f6;
     --pinky: #fb87fd;
     --light-purple: #d8bfd8;
@@ -16,6 +16,7 @@
     --yellow: #ffcb6b;
     --salmon: #e57373;
     --off-black: rgb(31, 28, 33);
+    --glow-shadow: #a0a0a0;
 }
 
 h1 {
