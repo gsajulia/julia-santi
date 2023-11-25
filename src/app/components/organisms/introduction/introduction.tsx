@@ -13,6 +13,7 @@ const Introduction = () => {
                     alt="My Profile Picture"
                     width={700}
                     height={600}
+                    quality={100}
                 />
             </div>
             <h1>
