@@ -10,7 +10,6 @@ import {
     B_PYTHON,
     B_RUBY,
     B_RUBY_N_RAILS,
-    D_NN,
     D_R,
     D_SHINY,
     F_CSS,
