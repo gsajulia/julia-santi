@@ -25,7 +25,7 @@ const Introduction = () => {
                 />
             </div>
             <h1>
-                Hi, I'm Júlia, a{" "}
+                Hi, I&apos;m Júlia, a{" "}
                 <mark className={styles.mark}>FullStack developer</mark>!
             </h1>
             <p className={styles.description}>
