@@ -30,12 +30,16 @@ const ExperienceCard = ({ experience }: TExperienceCard) => {
 
                     <div className={styles.tagsContainer}>
                         {tags.map((tag) => (
-                            <Chip title={tag.title} color={tag.color} />
+                            <Chip
+                                key={tag.id}
+                                title={tag.title}
+                                color={tag.color}
+                            />
                         ))}
                     </div>
                     <ul>
                         {about.map((item) => (
-                            <li>{item}</li>
+                            <li key={item}>{item}</li>
                         ))}
                     </ul>
                 </div>

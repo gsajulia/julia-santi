@@ -10,7 +10,10 @@ const Experience = () => {
             <h1 className={styles.title}>Experience & Skills</h1>
             <div className={styles.experienceContainer}>
                 {experiences.map((experience) => (
-                    <ExperienceCard experience={experience} />
+                    <ExperienceCard
+                        key={experience.id}
+                        experience={experience}
+                    />
                 ))}
             </div>
         </section>
