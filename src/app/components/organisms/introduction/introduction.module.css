@@ -10,6 +10,11 @@
     justify-content: center;
 }
 
+.profileImage {
+    filter: drop-shadow(8px 12px 9px grey);
+    border-radius: 50%;
+}
+
 .mark {
     background: none;
     color: var(--pinky);

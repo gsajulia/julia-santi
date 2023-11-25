@@ -9,11 +9,12 @@ const Introduction = () => {
         <section className={styles.introduction}>
             <div className={styles.profile}>
                 <Image
-                    src="/profile-image-pink.png"
-                    alt="My Profile Picture"
-                    width={700}
-                    height={600}
-                    quality={100}
+                    src="/me.png"
+                    alt="My Profile Image"
+                    objectFit="cover"
+                    width={300}
+                    height={300}
+                    className={styles.profileImage}
                 />
             </div>
             <h1>
