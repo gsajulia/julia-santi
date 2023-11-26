@@ -12,12 +12,12 @@
 .experienceContainer {
     display: grid;
     grid-template-columns: 40rem 40rem;
-    gap: 8px;
+    row-gap: 2rem;
     align-items: center;
     justify-items: center;
 }
 
-@media only screen and (max-width: 1450px) {
+@media only screen and (max-width: 1000px) {
     .experienceContainer {
         display: flex;
         justify-content: center;

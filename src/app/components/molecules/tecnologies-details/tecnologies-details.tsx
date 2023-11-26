@@ -9,9 +9,11 @@ const TechnologyDetails = ({ currentTechnology }: TTecnologiesDetails) => {
             <div className={styles.description}>
                 <img
                     width={50}
+                    height={50}
                     src={currentTechnology.image}
                     alt={currentTechnology.label}
                 />
+
                 <p>{currentTechnology.description}</p>
             </div>
         </div>

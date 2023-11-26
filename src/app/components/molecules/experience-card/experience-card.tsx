@@ -51,7 +51,7 @@ const ExperienceCard = ({ experience }: TExperienceCard) => {
             </div>
 
             <div className={styles.technologiesInfoContainer}>
-                {currentTechnology && (
+                {currentTechnology?.description && (
                     <TechnologyDetails currentTechnology={currentTechnology} />
                 )}
             </div>

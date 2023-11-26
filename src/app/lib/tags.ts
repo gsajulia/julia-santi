@@ -14,7 +14,7 @@ export const frontendTag = {
     title: "Frontend",
     color: "#FB87FD",
 };
-export const backendTag = { id: BACKEND, title: "Frontend", color: "#5CE1E6" };
+export const backendTag = { id: BACKEND, title: "Backend", color: "#5CE1E6" };
 
 export const dataScienceTag = {
     id: DATA_SCIENCE,

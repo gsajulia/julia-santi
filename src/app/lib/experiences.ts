@@ -38,7 +38,7 @@ export const sebratec = {
         "Help Junior devs",
         "ChatGPT API / Parser PDF",
     ],
-    tags: [frontendTag, designTag, dataScienceTag],
+    tags: [frontendTag, backendTag, dataScienceTag],
 };
 
 export const fetchly = {
@@ -99,8 +99,9 @@ export const cowmed = {
     companyName: "COWMED",
     period: "oct. 2018 - oct. 2019",
     about: [
-        "Maintain a Cows monitoring system using mainly React and Highcharts",
+        "Maintain a Cows monitoring system",
         "Migrate the old JQuery code to new React components",
+        "Aligning with the team",
     ],
     tags: [frontendTag, designTag],
 };
