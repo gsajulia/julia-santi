@@ -5,3 +5,9 @@
     padding: 6rem;
     min-height: 100vh;
 }
+
+@media (prefers-color-scheme: dark) {
+    .main {
+        padding: 1rem;
+    }
+}

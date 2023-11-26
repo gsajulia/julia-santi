@@ -16,3 +16,11 @@
     align-items: center;
     justify-items: center;
 }
+
+@media only screen and (max-width: 1450px) {
+    .experienceContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
