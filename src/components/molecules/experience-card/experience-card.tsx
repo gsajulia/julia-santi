@@ -5,7 +5,7 @@ import Chip from "../../atoms/chip/chip";
 import { useState } from "react";
 import TechnologyList from "../tecnologies-list/tecnologies-list";
 import TechnologyDetails from "../tecnologies-details/tecnologies-details";
-import { TSkill } from "@/app/models/base";
+import { TSkill } from "@/models/base";
 
 const ExperienceCard = ({ experience }: TExperienceCard) => {
     const { role, companyName, tags, period, about, skills } = experience;

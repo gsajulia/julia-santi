@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./introduction.module.css";
-import graduationIcon from "../../../../../public/graduating.svg";
+import graduationIcon from "../../../../public/graduating.svg";
 import { useState } from "react";
 
 const Introduction = () => {
@@ -57,7 +57,7 @@ const Introduction = () => {
             </div>
             <div className={styles.profile}>
                 <Image
-                    src={isFlipped ? "/profile-cartoon.png" : "/profile.png"}
+                    src={isFlipped ? "/profile-cartoon.png" : "/profile2.png"}
                     alt="My Profile Image"
                     width={300}
                     height={300}
