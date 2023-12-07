@@ -4,7 +4,8 @@ import styles from "./page.module.css";
 import { inter } from "@/ui/fonts";
 import { getAllGithubRepos } from "@/services/github";
 
-export default function Home({ portfolioRepositories }) {
+export default function Home({ portfolioRepositories }: any) {
+    //TODO fix this type
     return (
         <main className={`${inter.className} antialiased ${styles.main}`}>
             <Introduction />

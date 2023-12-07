@@ -8,7 +8,7 @@ const TechnologyDetails = ({ currentTechnology }: TTecnologiesDetails) => {
             <h2>{currentTechnology.label}</h2>
             <div className={styles.description}>
                 <img
-                    width={50}
+                    width={currentTechnology?.width ?? 50}
                     height={50}
                     src={currentTechnology.image}
                     alt={currentTechnology.label}

@@ -33,10 +33,11 @@ export const sebratec = {
     companyName: "Sebratec",
     period: "jan. 2023 - Current",
     about: [
-        "New features and fix bugs using React, areascript, Python with FastAPI, styled-components following a Figma Design",
-        "Align with the Project Manager and Design team",
-        "Help Junior devs",
-        "ChatGPT API / Parser PDF",
+        "Leading frontend development with React, Typescript and styled-components",
+        "Backend contributions in Python with FastAPI",
+        "Collaborating closely with the Project Manager and Design team to align development efforts with project objectives",
+        "Mentoring Junior developers",
+        "ChatGPT API / Parser PDF / AWS (S3)",
     ],
     tags: [frontendTag, backendTag, dataScienceTag],
 };
@@ -56,11 +57,11 @@ export const fetchly = {
     companyName: "Fetchly Labs",
     period: "sep. 2021 - jan. 2023",
     about: [
-        "New features and fix bugs using React, React Native, Ruby on Rails, styled-components and MapBox following a Figma Design",
-        "Align with the Project Manager, QA and Design team",
-        "Make Web and App (Android/IOS) releases",
-        "Help Junior devs",
-        "Make skillsnical interviews with new devs",
+        "New features and fix bugs using React, React Native, Ruby on Rails, styled-components and MapBox aligning with Figma design specifications",
+        "Collaborated closely with the Project Manager, QA, and Design teams to ensure a cohesive development process",
+        "Managed the release cycles for both web and app platforms (Android/IOS)",
+        "Mentoring junior developers",
+        "Conducted technical interviews for new developers",
     ],
     tags: [frontendTag, backendTag],
 };
@@ -78,9 +79,9 @@ export const drakkar = {
     companyName: "Drakkar",
     period: "mar. 2020 - apr. 2021",
     about: [
-        "Lead the Software Team and align with CEO",
-        "Manage the progress of devs' tasks",
-        "New features and fix bugs using mainly React and styled-components for a KPI based system",
+        "Lead software team, aligning strategies with the CEO",
+        "Managed developers' task progress",
+        "Implemented new features and bug fixes using React and styled-components for a KPI-based system",
     ],
     tags: [frontendTag, designTag],
 };

@@ -25,6 +25,11 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    color: var(--light-gray);
+}
+
+.experienceInfoContent ul li {
+    font-family: "Syne Mono", sans-serif;
 }
 
 .cardTitle {
@@ -34,6 +39,10 @@
 .smallText {
     font-size: 0.7rem;
     margin: 0.5rem;
+}
+
+.experienceLocation {
+    color: var(--light-gray);
 }
 
 .tagsContainer {

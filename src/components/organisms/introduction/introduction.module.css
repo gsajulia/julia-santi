@@ -41,16 +41,19 @@
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.6;
+    font-family: "Syne Mono", monospace;
 }
 
 .smallText {
     font-size: 0.75rem;
+    font-family: "Syne Mono", monospace;
 }
 
 .educationText {
     display: flex;
     align-items: center;
     gap: 1rem;
+    font-family: "Syne Mono", monospace;
 }
 
 .markLanguage {

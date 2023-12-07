@@ -8,6 +8,7 @@ export interface TSkill {
     id: number;
     label: string;
     image: string;
+    width?: string;
     description: string;
 }
 

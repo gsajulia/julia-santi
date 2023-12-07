@@ -40,7 +40,8 @@ export const javascriptSkill = {
 
 export const styledComponentsSkill = {
     id: F_STYLED_COMPONENTS,
-    image: "",
+    image: "https://styled-components.com/nav-logo.png",
+    width: "100px",
     label: "styled-components",
     description:
         "I have been working with styled-components for some years. It is a versatile tool that combines the structure of CSS with the flexibility of JavaScript, making it excellent for tackling challenges in complex styles.",
@@ -56,7 +57,7 @@ export const typescriptSkill = {
 
 export const highchartsSkill = {
     id: F_HIGHCHARTS,
-    image: "",
+    image: "https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2021/05/19085042/favicon-1.ico",
     label: "Highcharts",
     description:
         "I worked with Highcharts for 1 year; it's a very comprehensive tool for generating charts.",

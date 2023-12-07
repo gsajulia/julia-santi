@@ -5,7 +5,8 @@ import ExperienceCard from "../../molecules/experience-card/experience-card";
 import { TExperience } from "@/models/base";
 import styles from "./experience.module.css";
 
-const Experience = ({ portfolioRepositories }) => {
+const Experience = ({ portfolioRepositories }: any) => {
+    // TODO fix this type
     console.log(portfolioRepositories);
     const [experiences, setExperiences] = useState<TExperience[]>([
         sebratec,

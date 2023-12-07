@@ -1,4 +1,4 @@
-import { TExperience } from "@/app/models/base";
+import { TExperience } from "@/models/base";
 
 export interface TExperienceCard {
     experience: TExperience;

@@ -22,7 +22,7 @@ const ExperienceCard = ({ experience }: TExperienceCard) => {
             <h4 className={styles.cardTitle}>{role}</h4>
             <div className={styles.experienceInfoContainer}>
                 <div className={styles.experienceInfoContent}>
-                    <span>
+                    <span className={styles.experienceLocation}>
                         {companyName}
                         {"  "}
                         <span className={styles.smallText}>[ {period} ]</span>
