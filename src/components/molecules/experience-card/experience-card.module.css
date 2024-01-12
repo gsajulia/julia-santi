@@ -28,10 +28,6 @@
     color: var(--light-gray);
 }
 
-.experienceInfoContent ul li {
-    font-family: "Syne Mono", sans-serif;
-}
-
 .cardTitle {
     font-size: 1.5rem;
 }
