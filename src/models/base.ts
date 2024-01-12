@@ -21,3 +21,10 @@ export interface TExperience {
     about: string[];
     tags: TTags[];
 }
+
+export interface TGithubRepository {
+    id: number;
+    name: string;
+    description: string;
+    topics: string[]
+}

@@ -3,42 +3,82 @@ import Introduction from "@/components/organisms/introduction/introduction";
 import styles from "./page.module.css";
 import { inter } from "@/ui/fonts";
 import { getAllGithubRepos } from "@/services/github";
+import { TGithubRepository } from "@/models/base";
 
-export default function Home({ portfolioRepositories }: any) {
-    //TODO fix this type
-    return (
-        <main className={`${inter.className} antialiased ${styles.main}`}>
-            <Introduction />
-            <Experience portfolioRepositories={portfolioRepositories} />
-        </main>
-    );
+interface TTechnologyProjectsMap {
+  [key: string]: string[];
+}
+
+interface THome {
+  portfolioRepositories: TGithubRepository[];
+  technologyToProjects: TTechnologyProjectsMap;
+}
+
+const MAX_PER_PAGE = 100;
+
+export default function Home({
+  portfolioRepositories,
+  technologyToProjects,
+}: THome) {
+  console.log(portfolioRepositories);
+  console.log(technologyToProjects);
+  return (
+    <main className={`${inter.className} antialiased ${styles.main}`}>
+      <Introduction />
+      <Experience portfolioRepositories={portfolioRepositories} />
+    </main>
+  );
 }
 
 export async function getStaticProps() {
-    const getGithubInfo = async () => {
-        try {
-            const responseFirstPage = await getAllGithubRepos("page=1");
-            const responseSecondPage = await getAllGithubRepos("page=2");
+  const getAllPagesGithubInfo = async () => {
+    try {
+      let allRepositories: TGithubRepository[] = [];
+      let page = 1;
+      let hasMorePages = true;
 
-            const repositories = [...responseFirstPage, ...responseSecondPage];
+      while (hasMorePages) {
+        const response = await getAllGithubRepos(
+          `page=${page}&per_page=${MAX_PER_PAGE}`
+        );
+        allRepositories = [...allRepositories, ...response];
 
-            const portfolioRepositories = repositories.filter(
-                ({ description }) =>
-                    description && description.includes("Portfolio -")
-            );
-            return portfolioRepositories;
-        } catch (e) {
-            console.log(e);
-            return [];
+        if (response.length === 0 || response.length < MAX_PER_PAGE) {
+          hasMorePages = false;
+        } else {
+          page++;
         }
-    };
+      }
 
-    const portfolioRepositories = await getGithubInfo();
+      const portfolioRepositories = allRepositories.filter(
+        ({ description }) => description && description.includes("Portfolio -")
+      );
 
-    return {
-        props: {
-            portfolioRepositories,
-        },
-        revalidate: 86400, // Regenerate once per day
-    };
+      const technologyToProjects: TTechnologyProjectsMap = {};
+
+      portfolioRepositories.forEach((repo) => {
+        repo.topics.forEach((topic) => {
+          if (!technologyToProjects[topic]) {
+            technologyToProjects[topic] = [];
+          }
+          technologyToProjects[topic].push(repo.name);
+        });
+      });
+
+      return {
+        portfolioRepositories,
+        technologyToProjects,
+      };
+    } catch (e) {
+      console.log(e);
+      return [];
+    }
+  };
+
+  const response = await getAllPagesGithubInfo();
+
+  return {
+    props: response,
+    revalidate: 86400, // Regenerar uma vez por dia
+  };
 }
