@@ -19,6 +19,12 @@ const TechnologyList = ({
                     }`}
                     onClick={() => onTechnologyClick(technology)}
                 >
+                <img
+                    width={currentTechnology?.width ?? 25}
+                    height={25}
+                    src={technology.image}
+                    alt={technology.label}
+                />
                     {technology.label}
                 </li>
             ))}

@@ -5,11 +5,10 @@ export interface TTags {
 }
 
 export interface TSkill {
-    id: number;
+    id: string;
     label: string;
     image: string;
     width?: string;
-    description: string;
 }
 
 export interface TExperience {

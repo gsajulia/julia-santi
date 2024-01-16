@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+.technologiesList li {
+    display: flex;
+    gap: 1rem;
+}
+
 .technologyListItem {
     cursor: pointer;
     padding: 8px;

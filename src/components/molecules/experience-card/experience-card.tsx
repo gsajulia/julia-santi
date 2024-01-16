@@ -4,7 +4,6 @@ import styles from "./experience-card.module.css";
 import Chip from "../../atoms/chip/chip";
 import { useState } from "react";
 import TechnologyList from "../tecnologies-list/tecnologies-list";
-import TechnologyDetails from "../tecnologies-details/tecnologies-details";
 import { TSkill } from "@/models/base";
 
 const ExperienceCard = ({ experience }: TExperienceCard) => {
@@ -48,12 +47,6 @@ const ExperienceCard = ({ experience }: TExperienceCard) => {
                     onTechnologyClick={handleTechnologyClick}
                     currentTechnology={currentTechnology}
                 />
-            </div>
-
-            <div className={styles.technologiesInfoContainer}>
-                {currentTechnology?.description && (
-                    <TechnologyDetails currentTechnology={currentTechnology} />
-                )}
             </div>
         </div>
     );
