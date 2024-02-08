@@ -23,10 +23,10 @@ const Mentoring = () => {
               your career that your are. But! Julia has a practical approach in
               guiding you to achieve your career goal based on your previous
               experiences and can easily find holes in your mindset and fill it
-              in a fearless way. I was led by her to find positions which I'm
-              quite fit with and mentored me on how I can find more
-              opportunities by improving my resume. I don't have enough words to
-              describe her, don't hesitate for a session.
+              in a fearless way. I was led by her to find positions which
+              I&apos;m quite fit with and mentored me on how I can find more
+              opportunities by improving my resume. I don&apos;t have enough
+              words to describe her, don&apos;t hesitate for a session.
             </p>
           </div>
           <strong>

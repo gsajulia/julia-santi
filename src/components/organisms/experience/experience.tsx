@@ -57,9 +57,9 @@ const Experience = () => {
         )}
       </div>
       {experiences.map(
-        ({ skills }, index) =>
+        ({ skills, id }, index) =>
           currentExperience === index && (
-            <div className={styles.marquee}>
+            <div key={id} className={styles.marquee}>
               <p>
                 {skills.map((skill, index) => (
                   <span key={skill.id}>
