@@ -17,6 +17,7 @@ const Projects = ({ activeSection }: TProjectsSection) => {
               <Image
                 quality={100}
                 width={500}
+                className={styles.challengeImage}
                 src={frontendImage}
                 alt="Frontend code challenge example"
               />
@@ -57,6 +58,7 @@ const Projects = ({ activeSection }: TProjectsSection) => {
               <Image
                 quality={100}
                 width={500}
+                className={styles.challengeImage}
                 src={datasScienceImage}
                 alt="Data Science code challenge example"
               />
@@ -98,6 +100,7 @@ const Projects = ({ activeSection }: TProjectsSection) => {
               <Image
                 quality={100}
                 width={500}
+                className={styles.challengeImage}
                 src={backendImage}
                 alt="Backend code challenge example"
               />
