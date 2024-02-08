@@ -91,4 +91,16 @@
         justify-content: center;
         flex-direction: column;
     }
+    
+    .experiences {
+        padding: 0 2rem;
+        width: unset;
+    }
 }
+
+@media only screen and (max-width: 768px) { 
+    .experienceContent nav {
+        justify-content: center;
+    }
+}
+
