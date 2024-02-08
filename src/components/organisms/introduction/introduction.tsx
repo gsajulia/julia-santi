@@ -8,15 +8,14 @@ import linkedinIcon from "../../../../public/linkedin.svg";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { TIntroductionSection } from "./introduction.types";
 
-const Introduction = () => {
+const Introduction = ({
+  activeSection,
+  handleSectionClick,
+}: TIntroductionSection) => {
   const [isCopied, setIsCopied] = useState(false);
-  const [activeSection, setActiveSection] = useState("frontend");
   const { ref, inView } = useInView({ threshold: 0.2 });
-
-  const handleSectionClick = (section: string) => {
-    setActiveSection(section);
-  };
 
   const handleEmailIconClick = async () => {
     try {
@@ -56,7 +55,7 @@ const Introduction = () => {
         </div>
         <nav className={styles.navigation}>
           <a
-            href="#frontend"
+            href="#projects"
             className={activeSection === "frontend" ? styles.active : ""}
             onClick={() => handleSectionClick("frontend")}
           >
@@ -64,7 +63,7 @@ const Introduction = () => {
           </a>
           <span>•</span>
           <a
-            href="#backend"
+            href="#projects"
             className={activeSection === "backend" ? styles.active : ""}
             onClick={() => handleSectionClick("backend")}
           >
@@ -72,7 +71,7 @@ const Introduction = () => {
           </a>
           <span>•</span>
           <a
-            href="#datascience"
+            href="#projects"
             className={activeSection === "datascience" ? styles.active : ""}
             onClick={() => handleSectionClick("datascience")}
           >

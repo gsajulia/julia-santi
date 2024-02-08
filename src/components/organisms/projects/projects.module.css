@@ -1,4 +1,41 @@
-.title {
-    color: var(--pinky);
-    margin: 2rem 0;
+.projects {
+    background: var(--background);
+    display: flex;
+    justify-content: center;
+}
+
+.projectsContent {
+    margin: 4rem;
+    max-width: 1200px;
+}
+
+.projectsTitle {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.description {
+    line-height: 1.5;
+}
+
+.descriptionContainer {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.descriptionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.highlightProjects {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.highlightProjects a:hover {
+    color: var(--light-pink);
 }

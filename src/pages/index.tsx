@@ -1,3 +1,4 @@
+"use client";
 import Experience from "@/components/organisms/experience/experience";
 import Introduction from "@/components/organisms/introduction/introduction";
 import styles from "./page.module.css";
@@ -6,6 +7,8 @@ import { getAllGithubRepos } from "@/services/github";
 import { TGithubRepository } from "@/models/base";
 import About from "@/components/organisms/about/about";
 import Mentoring from "@/components/organisms/mentoring/mentoring";
+import Projects from "@/components/organisms/projects/projects";
+import { useState } from "react";
 
 interface TTechnologyProjectsMap {
   [key: string]: string[];
@@ -25,9 +28,19 @@ export default function Home({
 }: THome) {
   console.log(portfolioRepositories);
   console.log(technologyToProjects);
+  const [activeSection, setActiveSection] = useState("frontend");
+
+  const handleSectionClick = (section: string) => {
+    setActiveSection(section);
+  };
+
   return (
     <main className={`${inter.className} antialiased ${styles.main}`}>
-      <Introduction />
+      <Introduction
+        activeSection={activeSection}
+        handleSectionClick={handleSectionClick}
+      />
+      <Projects activeSection={activeSection} />
       <Experience />
       <About />
       <Mentoring />
