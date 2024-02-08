@@ -49,7 +49,7 @@ const Introduction = ({
               Over 5 years of Software Development experience
             </p>
             <p className={styles.description}>
-              Fluent with <span>English</span> and <span>Portuguese</span>
+              Fluent in <span>English</span> and <span>Portuguese</span>
             </p>
           </div>
         </div>
