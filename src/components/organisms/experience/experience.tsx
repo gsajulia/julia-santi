@@ -1,33 +1,77 @@
 "use client";
 import { useState } from "react";
 import { cowmed, drakkar, fetchly, sebratec } from "@/lib/experiences";
-import ExperienceCard from "../../molecules/experience-card/experience-card";
-import { TExperience } from "@/models/base";
 import styles from "./experience.module.css";
+import { TExperienceNavigation } from "./experience.types";
 
-const Experience = ({ portfolioRepositories }: any) => {
-    // TODO fix this type
-    console.log(portfolioRepositories);
-    const [experiences, setExperiences] = useState<TExperience[]>([
-        sebratec,
-        fetchly,
-        drakkar,
-        cowmed,
-    ]);
+const ExperienceNavigation = ({
+  experiences,
+  currentExperience,
+  setCurrentExperience,
+}: TExperienceNavigation) => (
+  <nav>
+    {experiences.map((_, index) => (
+      <button
+        key={index}
+        className={`${styles.experienceButton} ${
+          index === currentExperience ? styles.selected : ""
+        }`}
+        onClick={() => setCurrentExperience(index)}
+      >
+        {index + 1}
+      </button>
+    ))}
+  </nav>
+);
 
-    return (
-        <section className={styles.experienceAndSkillsContainer}>
-            <h1 className={styles.title}>Experience & Skills</h1>
-            <div className={styles.experienceContainer}>
-                {experiences.map((experience) => (
-                    <ExperienceCard
-                        key={experience.id}
-                        experience={experience}
-                    />
+const Experience = () => {
+  const [currentExperience, setCurrentExperience] = useState(0);
+  const experiences = [sebratec, fetchly, drakkar, cowmed];
+
+  return (
+    <section className={styles.experienceSection}>
+      <div className={styles.experienceContent}>
+        <h2 className={styles.experienceTitle}>Experience & Skills</h2>
+        {experiences.map(
+          ({ companyName, period, role, about, id }, index) =>
+            currentExperience === index && (
+              <div key={id} className={styles.experiences}>
+                <ExperienceNavigation
+                  experiences={experiences}
+                  currentExperience={currentExperience}
+                  setCurrentExperience={setCurrentExperience}
+                />
+                <h4 className={styles.role}>{role}</h4>
+                <span className={styles.experienceLocation}>
+                  {companyName}
+                  {"  "}
+                  <span className={styles.smallText}>[ {period} ]</span>
+                </span>
+                <ul>
+                  {about.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )
+        )}
+      </div>
+      {experiences.map(
+        ({ skills }, index) =>
+          currentExperience === index && (
+            <div className={styles.marquee}>
+              <p>
+                {skills.map((skill, index) => (
+                  <span key={skill.id}>
+                    {skill.label} {index !== skills.length - 1 && " • "}
+                  </span>
                 ))}
+              </p>
             </div>
-        </section>
-    );
+          )
+      )}
+    </section>
+  );
 };
 
 export default Experience;

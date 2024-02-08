@@ -12,16 +12,22 @@
     --green: #00ff9f;
     --light-blue: #5ce1e6;
     --light-blue-sky: #81d4fa;
-    --light-pink: #ffc0cb;
+    --light-pink: #F1C0F2;
     --yellow: #ffcb6b;
     --salmon: #e57373;
-    --off-black: rgb(31, 28, 33);
+    --off-dark: #1F1C21;
     --light-gray: #d3d3d3;
     --glow-shadow: #ede7f6;
+    --secondary-lightest: #D8BFD8;
+    font-size: 17px;
 }
 
 h1 {
     font-size: 2.125rem;
+}
+
+h2 {
+    font-size: 1.8rem;
 }
 
 * {
@@ -40,13 +46,12 @@ body {
 
 body {
     color: var(--off-white);
-    background: var(--background);
+    background: var(--off-dark);
 }
 
 a {
     color: inherit;
     text-decoration: none;
-    color: var(--purple);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,72 +1,102 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./introduction.module.css";
-import graduationIcon from "../../../../public/graduating.svg";
+import githubIcon from "../../../../public/github.svg";
+import emailIcon from "../../../../public/email.svg";
+import linkedinIcon from "../../../../public/linkedin.svg";
+
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Introduction = () => {
-    const [isFlipped, setIsFlipped] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
+  const [activeSection, setActiveSection] = useState("frontend");
+  const { ref, inView } = useInView({ threshold: 0.2 });
 
-    const changeProfileImage = () => {
-        if (!isFlipped) setIsFlipped((prev) => !prev);
-    };
+  const handleSectionClick = (section: string) => {
+    setActiveSection(section);
+  };
 
-    return (
-        <section className={styles.introduction}>
-            <div className={styles.introductionContent}>
-                <h1>
-                    Hi, I&apos;m Júlia, a{" "}
-                    <mark className={styles.mark}>FullStack developer</mark>!
-                </h1>
-                <p className={styles.description}>
-                    I have over 5 years of specialization in building robust
-                    interfaces using React and Typescript. My professional
-                    journey extends beyond Frontend development into Backend and
-                    Data Science. I am currently doing a postgraduate degree in
-                    Data Science at USP with a focus on Artificial Intelligence.
-                    I really enjoy challenges within this tech stack, Clean
-                    Code, teamwork, and continuous learning. In addition to
-                    that, I have contributed to the Data Science community
-                    through the publication of papers, with a focus on game
-                    mining and climate change prediction.
-                </p>
-                <div className={styles.educationText}>
-                    <Image width={50} src={graduationIcon} alt="Graduation" />
-                    Postgraduation - Data Science{" "}
-                    <span className={styles.smallText}>(2023-Present)</span> |
-                    {"  "}
-                    <Link href={"https://www5.usp.br/"}> USP</Link>
-                </div>
-                <div className={styles.educationText}>
-                    <Image
-                        width={50}
-                        src={graduationIcon}
-                        alt="Graduation icon"
-                    />
-                    Bachelor - Information Systems{" "}
-                    <span className={styles.smallText}>(2017-2022)</span> |
-                    {"  "}
-                    <Link href={"https://www.ufsm.br/"}> UFSM</Link>
-                </div>
-                <div className={styles.educationText}>
-                    Fluent with{" "}
-                    <mark className={styles.markLanguage}>English</mark> and{" "}
-                    <mark className={styles.markLanguage}>Portuguese</mark>
-                </div>
-            </div>
-            <div className={styles.profile}>
-                <Image
-                    src={isFlipped ? "/profile-cartoon.png" : "/profile2.png"}
-                    alt="My Profile Image"
-                    width={300}
-                    height={300}
-                    className={styles.profileImage}
-                    onMouseOut={changeProfileImage}
-                />
-            </div>
-        </section>
-    );
+  const handleEmailIconClick = async () => {
+    try {
+      await navigator.clipboard.writeText("julia.gs.acosta@gmail.com");
+      setIsCopied(true);
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 2000);
+    } catch (err) {
+      console.error("Failed to copy email: ", err);
+    }
+  };
+
+  return (
+    <section className={styles.introduction}>
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
+        transition={{ duration: 1 }}
+        className={styles.introductionContainer}
+      >
+        <div className={styles.introductionContent}>
+          <h1>
+            Hi, I&apos;m Júlia, a{" "}
+            <mark className={styles.mark}>Senior Frontend Developer</mark> and{" "}
+            <mark className={styles.mark}>FullStack Feveloper</mark>!
+          </h1>
+          <div className={styles.about}>
+            <p className={styles.description}>
+              Over 5 years of Software Development experience
+            </p>
+            <p className={styles.description}>
+              Fluent with <span>English</span> and <span>Portuguese</span>
+            </p>
+          </div>
+        </div>
+        <nav className={styles.navigation}>
+          <a
+            href="#frontend"
+            className={activeSection === "frontend" ? styles.active : ""}
+            onClick={() => handleSectionClick("frontend")}
+          >
+            Frontend
+          </a>
+          <span>•</span>
+          <a
+            href="#backend"
+            className={activeSection === "backend" ? styles.active : ""}
+            onClick={() => handleSectionClick("backend")}
+          >
+            Backend
+          </a>
+          <span>•</span>
+          <a
+            href="#datascience"
+            className={activeSection === "datascience" ? styles.active : ""}
+            onClick={() => handleSectionClick("datascience")}
+          >
+            Data Science
+          </a>
+        </nav>
+        <div className={styles.contactLinks}>
+          <a href="https://github.com/gsajulia/" target="_blank">
+            <Image width={40} src={githubIcon} alt="Go to Github" />
+          </a>
+          <button onClick={handleEmailIconClick} className={styles.iconButton}>
+            <Image width={40} src={emailIcon} alt="Copy Email" />
+            {isCopied && <span className={styles.tooltip}>Copied!</span>}
+          </button>
+          <a
+            href="https://www.linkedin.com/in/julia-gabriela-santi-acosta/"
+            target="_blank"
+          >
+            <Image width={40} src={linkedinIcon} alt="Go to linkedin" />
+          </a>
+        </div>
+      </motion.div>
+    </section>
+  );
 };
 
 export default Introduction;

@@ -1,0 +1,60 @@
+.aboutContainer {
+    background-color: var(--secondary-lightest);
+    margin-top: 100px;
+    color: var(--background);
+    display: flex;
+    justify-content: center;
+}
+
+.aboutContent {
+    width: 700px;
+}
+
+.smallText {
+    font-size: 0.8rem;
+}
+
+.aboutTitle {
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+.aboutMe {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.downloadCvButton {
+    background: none;
+    border:none;
+    padding: 4px 6px;
+    color: var(--background);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100px;
+    cursor: pointer;
+}
+
+.personDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem
+}
+
+.personDescription p {
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.graduationSection {
+    margin: 2rem 0;
+}
+
+.educationText{
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}

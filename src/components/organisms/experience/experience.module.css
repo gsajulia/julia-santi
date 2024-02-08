@@ -1,12 +1,37 @@
-.title {
-    color: var(--pinky);
-    margin: 2rem 0;
+.experienceButton {
+    border: none;
+    padding: 4px 8px;
+    background-color: var(--off-dark);
+    color: var(--off-white);
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.experienceAndSkillsContainer {
+.selected {
+    border: 2px solid var(--light-blue-sky);
+}
+
+.experienceTitle {
+    color: var(--of-white);
+    margin: 2rem 0;
+    align-self: center;
+}
+
+.experienceContent {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.experienceSection {
+    align-self: center;
+}
+
+.experienceContent nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
 }
 
 .experienceContainer {
@@ -16,6 +41,48 @@
     column-gap: 2rem;
     align-items: center;
     justify-items: center;
+}
+
+.experiences {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    width: 700px;
+}
+
+.experienceLocation {
+    color: var(--light-gray);
+}
+
+.role {
+    font-size: 20px;
+}
+
+.marquee {
+    position: absolute;
+    left: 0;
+    margin-top: 3cqw;
+    width: 100dvw;
+    line-height: 40px;
+    background-color: var(--light-blue-sky);
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 30s linear infinite;
+    color: var(--off-dark);
+    font-weight: bold;
+}
+
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
 }
 
 @media only screen and (max-width: 1000px) {

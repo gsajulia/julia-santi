@@ -4,6 +4,8 @@ import styles from "./page.module.css";
 import { inter } from "@/ui/fonts";
 import { getAllGithubRepos } from "@/services/github";
 import { TGithubRepository } from "@/models/base";
+import About from "@/components/organisms/about/about";
+import Mentoring from "@/components/organisms/mentoring/mentoring";
 
 interface TTechnologyProjectsMap {
   [key: string]: string[];
@@ -15,6 +17,7 @@ interface THome {
 }
 
 const MAX_PER_PAGE = 100;
+//portfolioRepositories={portfolioRepositories}
 
 export default function Home({
   portfolioRepositories,
@@ -25,7 +28,9 @@ export default function Home({
   return (
     <main className={`${inter.className} antialiased ${styles.main}`}>
       <Introduction />
-      <Experience portfolioRepositories={portfolioRepositories} />
+      <Experience />
+      <About />
+      <Mentoring />
     </main>
   );
 }
