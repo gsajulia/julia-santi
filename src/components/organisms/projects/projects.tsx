@@ -15,7 +15,7 @@ const Projects = ({ activeSection }: TProjectsSection) => {
             <h2 className={styles.projectsTitle}>Frontend</h2>
             <div className={styles.descriptionContainer}>
               <Image
-                sizes="(min-width: 768px) 100px"
+                quality={100}
                 width={500}
                 src={frontendImage}
                 alt="Frontend code challenge example"
@@ -55,7 +55,7 @@ const Projects = ({ activeSection }: TProjectsSection) => {
             <h2 className={styles.projectsTitle}>Data Science</h2>
             <div className={styles.descriptionContainer}>
               <Image
-                sizes="(min-width: 768px) 100px"
+                quality={100}
                 width={500}
                 src={datasScienceImage}
                 alt="Data Science code challenge example"
@@ -96,7 +96,7 @@ const Projects = ({ activeSection }: TProjectsSection) => {
             <h2 className={styles.projectsTitle}>Backend</h2>
             <div className={styles.descriptionContainer}>
               <Image
-                sizes="(min-width: 768px) 100px"
+                quality={100}
                 width={500}
                 src={backendImage}
                 alt="Backend code challenge example"
