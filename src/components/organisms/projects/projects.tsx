@@ -65,17 +65,22 @@ const Projects = ({ activeSection }: TProjectsSection) => {
               <div className={styles.descriptionContent}>
                 <p className={styles.description}>
                   I have made contributions to the field of data science through
-                  the publication of 2 research articles, the majority of which
-                  were developed in R. Additionally, I did my thesis project on
-                  this field: A Neural Network System for Estimating
-                  Paleotemperatures Based on Foraminifera Associations.
+                  the publication of 2 research articles, in which one of them
+                  was the{" "}
+                  <a href="https://www.sbgames.org/sbgames2019/en/computing/">
+                    best short paper of Brazilian Symposium on Games 2019
+                  </a>{" "}
+                  and the majority of the research were developed using R.
+                  Additionally, I did my thesis project on this field: A Neural
+                  Network System for Estimating Paleotemperatures Based on
+                  Foraminifera Associations.
                 </p>
                 <div>
                   <strong>Highlights</strong>
                   <p className={styles.highlightProjects}>
                     <Image width={16} src={starIcon} alt="Highlight project" />
                     <a href="https://www.sbgames.org/sbgames2019/files/papers/ComputacaoShort/196631.pdf">
-                      Data mining 7 Wonders
+                      Data mining 7 Wonders (Winner of SBGames 2019)
                     </a>
                     <Image width={16} src={starIcon} alt="Highlight project" />
                     <a href="https://www.sbgames.org/proceedings2020/ComputacaoShort/208553.pdf">
