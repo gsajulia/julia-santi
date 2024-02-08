@@ -42,7 +42,7 @@ const Introduction = ({
           <h1>
             Hi, I&apos;m Júlia, a{" "}
             <mark className={styles.mark}>Senior Frontend Developer</mark> and{" "}
-            <mark className={styles.mark}>FullStack Feveloper</mark>!
+            <mark className={styles.mark}>FullStack Developer</mark>!
           </h1>
           <div className={styles.about}>
             <p className={styles.description}>
