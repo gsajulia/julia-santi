@@ -25,7 +25,7 @@ const Projects = ({ activeSection }: TProjectsSection) => {
                 <p className={styles.description}>
                   I have completed over 40 projects, mainly using React,
                   TypeScript, JavaScript, and Next.js. A significant portion of
-                  these were part of an intensive 35-week coding challenge.You
+                  these were part of an intensive 30-week coding challenge.You
                   can explore my portfolio of work on both my GitHub and
                   LinkedIn profiles, where I&apos;ve detailed my contributions
                   and the technologies used in each project.
