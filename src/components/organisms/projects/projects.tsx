@@ -26,8 +26,8 @@ const Projects = ({ activeSection }: TProjectsSection) => {
                   TypeScript, JavaScript, and Next.js. A significant portion of
                   these were part of an intensive 35-week coding challenge.You
                   can explore my portfolio of work on both my GitHub and
-                  LinkedIn profiles, where I've detailed my contributions and
-                  the technologies used in each project.
+                  LinkedIn profiles, where I&apos;ve detailed my contributions
+                  and the technologies used in each project.
                 </p>
                 <div>
                   <strong>Highlights</strong>
@@ -64,9 +64,9 @@ const Projects = ({ activeSection }: TProjectsSection) => {
                 <p className={styles.description}>
                   I have made contributions to the field of data science through
                   the publication of 2 research articles, the majority of which
-                  were developed in R. Additionally, I did my thesis project, 'A
-                  Neural Network System for Estimating Paleotemperatures Based
-                  on Foraminifera Associations,' on this same field.
+                  were developed in R. Additionally, I did my thesis project on
+                  this field: A Neural Network System for Estimating
+                  Paleotemperatures Based on Foraminifera Associations.
                 </p>
                 <div>
                   <strong>Highlights</strong>
@@ -106,7 +106,7 @@ const Projects = ({ activeSection }: TProjectsSection) => {
                   This project is a System that Allows Parents to Limit Their
                   Children’s Access and Playing Time to Steam Games. This
                   multidisciplinary project involved developing a web interface
-                  and backend to control children's gaming activities.
+                  and backend to control children&apos;s gaming activities.
                 </p>
                 <div>
                   <strong>Highlights</strong>
