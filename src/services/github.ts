@@ -5,16 +5,9 @@ export const getAllGithubRepos = async (query = "") => {
     return await response.json();
 };
 
-export const getAllLanguagesByRepo = async (name: string) => {
+export const getRepoFiles = async (name: string, path: string) => {
     const response = await fetch(
-        `https://api.github.com/users/gsajulia/repos/${name}/languages`
-    );
-    return await response.json();
-};
-
-export const getAllRepositoriesByLanguage = async () => {
-    const response = await fetch(
-        "https://api.github.com/search/repositories?q=user:gsajulia+language:javascript+language:typescript+language:python+language:ruby+language:r"
+        `https://api.github.com/repos/gsajulia/${name}/contents/${path}`
     );
     return await response.json();
 };

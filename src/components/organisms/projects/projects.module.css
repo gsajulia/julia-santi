@@ -49,6 +49,33 @@
     color: var(--light-pink);
 }
 
+@keyframes fallAndSlide {
+    0% {
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(3rem) translateX(0); /* Ajuste conforme necessário */
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(3rem) translateX(50vw); /* Ajuste para mover até o final da página */
+      opacity: 0;
+    }
+  }
+
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    top: 80vh;
+    left: 27%;
+    animation: fallAndSlide 4s forwards;
+    z-index: 3;
+}
+
 @media only screen and (max-width: 1300px) { 
     .projects{
         padding: 0 2rem;

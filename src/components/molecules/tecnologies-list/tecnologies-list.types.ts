@@ -1,4 +1,4 @@
-import { TSkill } from "@/models/base";
+import { TSkill } from "@/types/base";
 
 export interface TTecnologiesList {
     currentTechnology?: TSkill;

@@ -24,14 +24,14 @@ const About = () => {
   };
 
   return (
-    <section className={styles.aboutContainer}>
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 100 }}
-        transition={{ duration: 1 }}
-        className={styles.aboutContent}
-      >
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -100 }}
+      transition={{ duration: 1 }}
+      className={styles.aboutContainer}
+    >
+      <div className={styles.aboutContent}>
         <h2 className={styles.aboutTitle}>Who is Júlia?</h2>
         <div className={styles.aboutMe}>
           <Image
@@ -82,8 +82,8 @@ const About = () => {
             <span className={styles.smallText}>(2017-2022)</span>
           </div>
         </div>
-      </motion.div>
-    </section>
+      </div>
+    </motion.section>
   );
 };
 

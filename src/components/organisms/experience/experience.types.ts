@@ -1,4 +1,4 @@
-import { TExperience } from "@/models/base";
+import { TExperience } from "@/types/base";
 import { Dispatch, SetStateAction } from "react";
 
 export interface TExperienceNavigation {

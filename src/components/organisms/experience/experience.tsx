@@ -18,7 +18,7 @@ const ExperienceNavigation = ({
         }`}
         onClick={() => setCurrentExperience(index)}
       >
-        {index + 1}
+        {experiences.length - index}
       </button>
     ))}
   </nav>

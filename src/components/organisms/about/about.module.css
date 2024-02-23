@@ -1,9 +1,12 @@
 .aboutContainer {
+    position: absolute;
     background-color: var(--secondary-lightest);
-    margin-top: 100px;
     color: var(--background);
     display: flex;
     justify-content: center;
+    padding: 2rem;
+    margin: 150px 25%;
+    border-radius: 1rem;
 }
 
 .aboutContent {
