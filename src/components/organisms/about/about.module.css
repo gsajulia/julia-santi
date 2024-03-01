@@ -5,8 +5,10 @@
     display: flex;
     justify-content: center;
     padding: 2rem;
-    margin: 150px 25%;
     border-radius: 1rem;
+    top: 50% !important;
+    left: 50%  !important;
+    transform: translate(-50%, -50%)  !important;
 }
 
 .aboutContent {
@@ -71,6 +73,13 @@
         width: unset;
         padding:0 2rem;
     }    
+    
+    .aboutContainer {
+        position: relative;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important; 
+    }
 }
 
 @media only screen and (max-width:  700px) {
