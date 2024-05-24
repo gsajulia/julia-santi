@@ -5,12 +5,11 @@ import { useFrame } from "@react-three/fiber";
 
 interface TSky {
   isRotating: boolean;
+  cenarioOption: string;
 }
 
-export function Sky({ isRotating }: TSky) {
-  const options = ["stars.glb", "sky.glb"];
-  const randomIndex = Math.floor(Math.random() * options.length);
-  const sky = useGLTF(options[randomIndex]);
+export function Sky({ isRotating, cenarioOption }: TSky) {
+  const sky = useGLTF(cenarioOption);
   const skyRef = useRef<Mesh | null>(null);
 
   useFrame((_, delta) => {
