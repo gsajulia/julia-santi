@@ -13,6 +13,7 @@ import { TIntroductionSection } from "./introduction.types";
 const Introduction = ({
   activeSection,
   handleSectionClick,
+  yearsOfExperience,
 }: TIntroductionSection) => {
   const [isCopied, setIsCopied] = useState(false);
   const { ref, inView } = useInView({ threshold: 0.2 });
@@ -46,7 +47,7 @@ const Introduction = ({
           </h1>
           <div className={styles.about}>
             <p className={styles.description}>
-              Over 5 years of Software Development experience
+              Over {yearsOfExperience} years of Software Development experience
             </p>
             <p className={styles.description}>
               Fluent in <span>English</span> and <span>Portuguese</span>

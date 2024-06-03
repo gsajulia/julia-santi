@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { cowmed, drakkar, fetchly, sebratec } from "@/lib/experiences";
+import { cowmed, drakkar, fetchly, sebratec, vetta } from "@/lib/experiences";
 import styles from "./experience.module.css";
 import { TExperienceNavigation } from "./experience.types";
 
@@ -26,7 +26,7 @@ const ExperienceNavigation = ({
 
 const Experience = () => {
   const [currentExperience, setCurrentExperience] = useState(0);
-  const experiences = [sebratec, fetchly, drakkar, cowmed];
+  const experiences = [vetta, sebratec, fetchly, drakkar, cowmed];
 
   return (
     <section className={styles.experienceSection}>

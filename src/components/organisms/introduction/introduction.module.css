@@ -75,7 +75,7 @@
   
 .tooltip {
     position: absolute;
-    bottom: 100%;
+    margin-top: 30px;
     left: 50%;
     transform: translateX(-50%);
     padding: 1rem 5px;

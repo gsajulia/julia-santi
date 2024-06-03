@@ -7,7 +7,7 @@ import About from "@/components/organisms/about/about";
 import Mentoring from "@/components/organisms/mentoring/mentoring";
 import Projects from "@/components/organisms/projects/projects";
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useState } from "react";
 import { Sky } from "@/models/sky";
 import Structure from "@/models/structure";
 import { Html } from "@react-three/drei";
@@ -18,10 +18,7 @@ export default function Home() {
   const handleSectionClick = (section: string) => {
     setActiveSection(section);
   };
-  const cenarioOptions = ["stars.glb", "sky.glb"];
-  // const [choosenScenario, setChoosenScenario] = useState<string>(
-  // );
-  const randomIndex = Math.floor(Math.random() * cenarioOptions.length);
+
   const adjustStructureForScreenSize = () => {
     let screenScale, screenPosition;
 
@@ -37,16 +34,14 @@ export default function Home() {
   };
   const [structureScale, structurePosition] = adjustStructureForScreenSize();
 
-  // useEffect(() => {
-  //   const randomIndex = Math.floor(Math.random() * cenarioOptions.length);
-  //   setChoosenScenario(cenarioOptions[randomIndex]);
-  // }, []);
+  const yearsOfExperience = new Date().getFullYear() - 2018;
 
   return (
     <main className={`${inter.className} antialiased ${styles.main}`}>
       <Introduction
         activeSection={activeSection}
         handleSectionClick={handleSectionClick}
+        yearsOfExperience={yearsOfExperience}
       />
       <Projects activeSection={activeSection} />
       <Experience />
@@ -81,7 +76,7 @@ export default function Home() {
         </Suspense>
       </Canvas> */}
       <div style={{ position: "relative" }}>
-        <About />
+        <About yearsOfExperience={yearsOfExperience} />
         <Canvas
           id="sky-rotating"
           className={styles.backgroundAnimation}
@@ -94,10 +89,7 @@ export default function Home() {
               </Html>
             }
           >
-            <Sky
-              isRotating={true}
-              cenarioOption={cenarioOptions[randomIndex]}
-            />
+            <Sky isRotating={true} />
           </Suspense>
         </Canvas>
       </div>

@@ -5,8 +5,11 @@ import downloadIcon from "../../../../public/download.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+type TAbout = {
+  yearsOfExperience: number;
+};
 
-const About = () => {
+const About = ({ yearsOfExperience }: TAbout) => {
   const { ref, inView } = useInView({ threshold: 0.2 });
   const handleDownloadPdf = async () => {
     const response = await fetch("julia_acosta_english_v3.pdf");
@@ -43,15 +46,16 @@ const About = () => {
           />
           <div className={styles.personDescription}>
             <p>
-              I have over 5 years of specialization in building robust
-              interfaces using React and Typescript. My professional journey
-              extends beyond Frontend development into Backend and Data Science.
-              I am currently doing a postgraduate degree in Data Science at USP
-              with a focus on Artificial Intelligence. I really enjoy challenges
-              within this tech stack, Clean Code, teamwork, and continuous
-              learning. In addition to that, I have contributed to the Data
-              Science community through the publication of papers, with a focus
-              on game mining and climate change prediction.
+              I have over {yearsOfExperience} years of specialization in
+              building robust interfaces using React and Typescript. My
+              professional journey extends beyond Frontend development into
+              Backend and Data Science. I am currently doing a postgraduate
+              degree in Data Science at USP with a focus on Artificial
+              Intelligence. I really enjoy challenges within this tech stack,
+              Clean Code, teamwork, and continuous learning. In addition to
+              that, I have contributed to the Data Science community through the
+              publication of papers, with a focus on game mining and climate
+              change prediction.
             </p>
             <button
               onClick={handleDownloadPdf}

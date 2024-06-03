@@ -1,4 +1,4 @@
-import { EXP_FETCHLY, EXP_SEBRATEC } from "../utils/global";
+import { EXP_FETCHLY, EXP_SEBRATEC, EXP_COWMED, EXP_DRAKKAR, EXP_VETTA } from "../utils/global";
 import { backendTag, designTag, frontendTag, dataScienceTag } from "./tags";
 import {
     cssSkill,
@@ -17,6 +17,28 @@ import {
     typescriptSkill,
 } from "./technologies";
 
+export const vetta = {
+    id: EXP_VETTA,
+    skills: [
+        reactSkill,
+        javascriptSkill,
+        highchartsSkill,
+        sassSkill,
+        htmlSkill,
+        cssSkill,
+    ],
+    role: "Senior Frontend Developer",
+    companyName: "Vetta/SMS Group",
+    period: "mar. 2024 - Current",
+    about: [
+        "Frontend development with React, Typescript and styled-components",
+        "Creating, developing, and delivering high-quality digital solutions in the global metals industry at SMS Group.",
+        "Collaborating with the Germany team, my focus is on implementing clean code principles and following best practices in software architecture to ensure the delivery of top-notch software products.",
+    ],
+    tags: [frontendTag],
+};
+
+
 export const sebratec = {
     id: EXP_SEBRATEC,
     skills: [
@@ -31,7 +53,7 @@ export const sebratec = {
     ],
     role: "Senior Frontend | FullStack Developer",
     companyName: "Sebratec",
-    period: "jan. 2023 - Current",
+    period: "jan. 2023 - mar. 2024",
     about: [
         "Leading frontend development with React, Typescript and styled-components",
         "Backend contributions in Python with FastAPI",
@@ -67,7 +89,7 @@ export const fetchly = {
 };
 
 export const drakkar = {
-    id: EXP_FETCHLY,
+    id: EXP_DRAKKAR,
     skills: [
         reactSkill,
         javascriptSkill,
@@ -87,7 +109,7 @@ export const drakkar = {
 };
 
 export const cowmed = {
-    id: EXP_FETCHLY,
+    id: EXP_COWMED,
     skills: [
         reactSkill,
         javascriptSkill,

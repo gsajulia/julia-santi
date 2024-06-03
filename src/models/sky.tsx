@@ -5,11 +5,20 @@ import { useFrame } from "@react-three/fiber";
 
 interface TSky {
   isRotating: boolean;
-  cenarioOption: string;
 }
 
-export function Sky({ isRotating, cenarioOption }: TSky) {
-  const sky = useGLTF(cenarioOption);
+const isDaytime = () => {
+  const now = new Date();
+  const hours = now.getHours();
+
+  const dayStart = 6;
+  const dayEnd = 18;
+
+  return hours >= dayStart && hours < dayEnd;
+};
+
+export function Sky({ isRotating }: TSky) {
+  const sky = useGLTF(isDaytime() ? "sky.glb" : "stars.glb");
   const skyRef = useRef<Mesh | null>(null);
 
   useFrame((_, delta) => {

@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <RootLayout>
       <Head>
         <title>Júlia</title>
-        <link rel="icon" href="/profile-cartoon.png" />
+        <link rel="icon" href="/mate.png" />
       </Head>
       <Component {...pageProps} />
     </RootLayout>
