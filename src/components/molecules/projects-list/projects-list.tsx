@@ -39,6 +39,7 @@ const ProjectsList = ({ typeId, sectionChanged }: Props) => {
             .map((project, index) =>
               onMouseHoverInIndex !== index ? (
                 <div
+                  key={project.id}
                   onClick={() =>
                     window.open(project?.url, "_blank", "noopener,noreferrer")
                   }
@@ -54,7 +55,7 @@ const ProjectsList = ({ typeId, sectionChanged }: Props) => {
                   </p>
                 </div>
               ) : (
-                <div className={styles.projectCard}>
+                <div key={project.id} className={styles.projectCard}>
                   <div className={styles.tags}>
                     {project.tags.map((tag, index) => (
                       <strong key={index} className={styles.tag}>
