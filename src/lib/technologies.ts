@@ -18,6 +18,7 @@ import {
   F_HIGHCHARTS,
   F_HTML,
   F_JAVASCRIPT,
+  F_JEST,
   F_NEXT,
   F_REACT,
   F_REACT_LEAFLET,
@@ -195,4 +196,9 @@ export const angularSkill = {
   id: F_ANGULAR,
   image: "",
   label: "Angular",
+};
+export const jestSkill = {
+  id: F_JEST,
+  image: "",
+  label: "Jest",
 };

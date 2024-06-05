@@ -12,7 +12,7 @@ type TAbout = {
 const About = ({ yearsOfExperience }: TAbout) => {
   const { ref, inView } = useInView({ threshold: 0.2 });
   const handleDownloadPdf = async () => {
-    const response = await fetch("julia_acosta_english_v3.pdf");
+    const response = await fetch("julia_santi_2024.pdf");
 
     if (response.status !== 200) {
       console.error(response.status, response.statusText);

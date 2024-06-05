@@ -51,10 +51,8 @@ const Projects = ({ activeSection }: Props) => {
             <h2 className={styles.projectsTitle}>Frontend</h2>
             <div className={styles.descriptionContainer}>
               <div
+                className={styles.canvaContainer}
                 style={{
-                  width: "100%", // Correspondente a w-full do Tailwind
-                  height: "50vh", // Correspondente a h-screen do Tailwind
-                  backgroundColor: "transparent", // Correspondente a bg-transparent do Tailwind
                   cursor: isRotating ? "grabbing" : "grab",
                 }}
               >
@@ -86,41 +84,12 @@ const Projects = ({ activeSection }: Props) => {
                     challenge.You can explore my portfolio of work on both my
                     GitHub and LinkedIn profiles, where I&apos;ve detailed my
                     contributions and the technologies used in each project.
+                    Mostly of the projects are listed bellow.
                   </p>
                   <ProjectsList
                     typeId={frontendTag.id}
                     sectionChanged={sectionChanged}
                   />
-                  {/* <div>
-                    <strong>Highlights</strong>
-                    <p className={styles.highlightProjects}>
-                      <Image
-                        width={16}
-                        src={starIcon}
-                        alt="Highlight project"
-                      />
-                      <a href="https://kanban-boracodar.vercel.app/">Kanban</a>
-                      <Image
-                        width={16}
-                        src={starIcon}
-                        alt="Highlight project"
-                      />
-                      <a href="https://carnaval-searcher.vercel.app/">
-                        Carnival
-                      </a>
-                      <Image
-                        width={16}
-                        src={starIcon}
-                        alt="Highlight project"
-                      />
-                      <a href="https://weather-dashboard-eosin.vercel.app/">
-                        Climate dashboard
-                      </a>
-                    </p>
-                  </div>
-                  <strong>
-                    React • Typescript • Javascript • Next • HTML • CSS
-                  </strong> */}
                 </>
               </div>
             </div>

@@ -19,6 +19,7 @@ export const F_NEXT = "next";
 export const F_REACT_LEAFLET = "react-leaflet";
 export const F_APEX_CHARTS = "apex-charts";
 export const F_ANGULAR = "angular";
+export const F_JEST = "jest";
 
 // Backend ids 101 - 199
 
