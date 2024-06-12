@@ -55,7 +55,10 @@ const ProjectsList = ({ typeId, sectionChanged }: Props) => {
                   </p>
                 </div>
               ) : (
-                <div key={project.id} className={styles.projectCard}>
+                <div
+                  key={project.id}
+                  className={`${styles.projectCard} ${styles.projectCardCentered}`}
+                >
                   <div className={styles.tags}>
                     {project.tags.map((tag, index) => (
                       <strong key={index} className={styles.tag}>

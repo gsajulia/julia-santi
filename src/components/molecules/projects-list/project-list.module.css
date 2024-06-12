@@ -9,6 +9,12 @@
   height: 250px;
 }
 
+.projectCardCentered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .projectCard:hover {
   background: white;
   color: black;

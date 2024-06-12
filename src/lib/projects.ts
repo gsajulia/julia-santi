@@ -211,7 +211,7 @@ export default [
       "System designed to predict foraminifera characteristics using neural network models.",
     priority: 2,
     img: "https://raw.githubusercontent.com/gsajulia/gsajulia.github.io/main/src/assets/foraminifera-predictor/Home.png",
-    tags: [T.RSkill],
+    tags: [T.RSkill, T.RShinySkill],
     categories: [C.frontendTag],
     mainCategoryId: C.frontendTag.id,
   },

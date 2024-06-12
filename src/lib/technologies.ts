@@ -154,10 +154,12 @@ export const postgresSQLSkill = {
 
 export const RSkill = { id: D_R, image: "", label: "R" };
 
+export const RShinySkill = { id: D_SHINY, image: "", label: "R Shiny" };
+
 export const shinySkill = {
   id: D_SHINY,
   image: "",
-  label: "R Shiny",
+  label: "Shiny",
 };
 
 export const rubySkill = {
